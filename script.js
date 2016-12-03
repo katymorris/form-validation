@@ -71,6 +71,23 @@ $(document).ready(function(){
 
 	/* ---------- EVENT LISTENERS ------------- */
 
+	/* ----- HOVER EVENTS -------- */
+		$('body').on('mouseenter', '.submit-btn', function() {
+			if (windowWidth > 768) {
+				if (!$(this).hasClass('disabled')) {
+					debugger
+					$(this).stop().transition({'background-color': '#6a96cf'}, {duration: 300})
+				}
+			}
+		})
+		$('body').on('mouseleave', '.submit-btn', function() {
+			if (!$(this).hasClass('disabled')) {
+				if (windowWidth > 768) {
+					$(this).stop().transition({'background-color': '#84b9ff'}, {duration: 300})
+				}
+			}
+		})
+
 	//validate email
 	$('body').on('change', '.signup-email', function() {
 		if (windowWidth > 768) {
