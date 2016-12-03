@@ -75,7 +75,6 @@ $(document).ready(function(){
 		$('body').on('mouseenter', '.submit-btn', function() {
 			if (windowWidth > 768) {
 				if (!$(this).hasClass('disabled')) {
-					debugger
 					$(this).stop().transition({'background-color': '#6a96cf'}, {duration: 300})
 				}
 			}
@@ -83,7 +82,7 @@ $(document).ready(function(){
 		$('body').on('mouseleave', '.submit-btn', function() {
 			if (!$(this).hasClass('disabled')) {
 				if (windowWidth > 768) {
-					$(this).stop().transition({'background-color': '#84b9ff'}, {duration: 300})
+					$(this).stop().transition({'background-color': '#69a9ff'}, {duration: 300})
 				}
 			}
 		})
