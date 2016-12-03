@@ -1,0 +1,66 @@
+<DOCTYPE html>
+<html>
+	<head>
+	<title>Sign Up</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+	<div class="wrapper page-header-wrapper signup-header-wrapper">
+		<div class="container page-header-container">
+			<h1 class="main-title">Sign Up</h1>
+		</div>
+	</div><!--page header wrapper-->
+	<div class="main-wrapper signup-main-wrapper wrapper">
+		<div class="main-container container">
+				<form method="post" action="{{ route('signup') }}" class="form-horizontal" autocomplete="off">
+					<!-- Email -->
+					<p class="fields-required">All fields are required.</p>
+					<div class="email-input-box signup-input-box control-group{{ $errors->first('email', ' error') }}">
+						<div class="controls">
+							<input class="signup-info signup-email" data-completecheck="incomplete" placeholder="Email" type="text" name="email" id="email" />
+						</div>
+					</div>
+					<img class="email-checkmark checkmark" src="images/checkmark.png">
+					<img class="email-cross cross" src="images/cross.png">
+					<div class="push"></div>
+					<!-- Email Confirm -->
+					<div class="signup-input-box control-group{{ $errors->first('email_confirm', ' error') }}">
+						<div class="controls">
+							<input class="signup-info signup-email-confirm" data-completecheck="incomplete" placeholder="Confirm Email" type="text" name="email_confirm" id="email_confirm" />
+						</div>
+					</div>
+					<img class="email-confirm-checkmark checkmark" src="images/checkmark.png">
+					<img class="email-confirm-cross cross" src="images/cross.png">
+					<div class="push"></div>
+					<!-- Password -->
+					<div class="signup-input-box control-group">
+						<div class="controls">
+							<input class="signup-info signup-password" data-completecheck="incomplete" placeholder="Password" type="password" name="password" id="password" value="" />
+						</div>
+					</div>
+					<img class="pw-checkmark checkmark" src="images/checkmark.png">
+					<img class="pw-cross cross" src="images/cross.png">
+					<div class="push"></div>
+					<!-- Password Confirm -->
+					<div class="signup-input-box control-group">
+						<div class="controls">
+							<input class="signup-info signup-password-confirm" data-completecheck="incomplete" placeholder="Confirm Password" type="password" name="password_confirm" id="password_confirm" />
+						</div>
+					</div>
+					<img class="pw-confirm-checkmark checkmark" src="images/checkmark.png">
+					<img class="pw-confirm-cross cross" src="images/cross.png">
+					<div class="push"></div>
+					<!-- Form actions -->
+					<div class="control-group">
+					<div class="push"></div>
+						<div class="controls">
+							<button type="submit" class="submit-btn disabled" id="signup-submit">Sign Up</button>
+						</div>
+					</div>
+				</form>
+			</div><!--main container-->
+		</div><!--main wrapper-->
+	</body>
+</html>
